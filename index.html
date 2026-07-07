@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BNO Agro — Agricultura de Precisión desde el Aire | Río Cuarto, Córdoba</title>
+<meta name="description" content="BNO Agro brinda servicios agrícolas aéreos con drones en Río Cuarto, Córdoba: pulverización, siembra y fertilización aérea con precisión milimétrica. Solicitá tu asesoramiento.">
+<meta name="keywords" content="drones agrícolas, pulverización aérea, siembra aérea, fertilización aérea, agricultura de precisión, Río Cuarto, Córdoba, Argentina, BNO Agro">
+<meta name="author" content="BNO Agro">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.bnoagro.com.ar/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BNO Agro">
+<meta property="og:title" content="BNO Agro — Agricultura de Precisión desde el Aire">
+<meta property="og:description" content="Servicios agrícolas aéreos con drones: pulverización, siembra, fertilización y mapeo de precisión en Río Cuarto, Córdoba.">
+<meta property="og:image" content="https://www.bnoagro.com.ar/assets/img/og-cover.jpg">
+<meta property="og:url" content="https://www.bnoagro.com.ar/">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BNO Agro — Agricultura de Precisión desde el Aire">
+<meta name="twitter:description" content="Tecnología aplicada al campo: pulverización, siembra y fertilización aérea con drones de última generación.">
+<meta name="twitter:image" content="https://www.bnoagro.com.ar/assets/img/og-cover.jpg">
+
+<!-- Icons / Manifest -->
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="assets/icons/site.webmanifest">
+<meta name="theme-color" content="#07090A">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
+
+<link rel="preload" as="style" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "BNO Agro",
+  "image": "https://www.bnoagro.com.ar/assets/img/og-cover.jpg",
+  "description": "Servicios agrícolas aéreos con drones: pulverización, siembra y fertilización aérea de precisión.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Río Cuarto",
+    "addressRegion": "Córdoba",
+    "addressCountry": "AR"
+  },
+  "telephone": "+543584247501",
+  "email": "bnoagro1@gmail.com",
+  "areaServed": "Córdoba, Argentina",
+  "sameAs": ["https://www.instagram.com/bno.agro"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar" data-reveal>
+  <div class="navbar__inner">
+    <a href="#top" class="navbar__brand" aria-label="BNO Agro — Inicio">
+      <svg class="navbar__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1"/>
+        <path d="M20 6 L20 34 M6 20 L34 20" stroke="currentColor" stroke-width="1"/>
+        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+      </svg>
+      <span>BNO<em>AGRO</em></span>
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navegación principal">
+      <a href="#nosotros"><span>01</span>Nosotros</a>
+      <a href="#servicios"><span>02</span>Servicios</a>
+      <a href="#beneficios"><span>03</span>Beneficios</a>
+      <a href="#proceso"><span>04</span>Proceso</a>
+      <a href="#galeria"><span>05</span>Galería</a>
+      <a href="#contacto"><span>06</span>Contacto</a>
+    </nav>
+
+    <a href="https://wa.me/5493584247501" class="btn btn--nav" target="_blank" rel="noopener">
+      <span>Hablar por WhatsApp</span>
+    </a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Navegación móvil">
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#galeria">Galería</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#faq">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <canvas id="fieldCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__overlay"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <div class="hero__telemetry" aria-hidden="true">
+      <span data-lat>LAT -33.1232°</span>
+      <span data-lon>LON -64.3496°</span>
+      <span data-alt>ALT <b data-counter-alt>0</b> M</span>
+      <span data-status>STATUS <b class="dot-live"></b> EN VUELO</span>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow" data-reveal>
+        <span class="eyebrow__line"></span>
+        Río Cuarto · Córdoba · Argentina
+      </p>
+      <h1 class="hero__title">
+        <span class="line" data-reveal-text>AGRICULTURA</span>
+        <span class="line line--outline" data-reveal-text>DE PRECISIÓN</span>
+        <span class="line" data-reveal-text>DESDE EL AIRE</span>
+      </h1>
+      <p class="hero__subtitle" data-reveal>
+        Tecnología aplicada al campo para pulverización, siembra y fertilización aérea
+        con máxima precisión, milímetro a milímetro, hectárea a hectárea.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#contacto" class="btn btn--primary btn--magnetic">
+          <span>Solicitar asesoramiento</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="#servicios" class="btn btn--ghost btn--magnetic">
+          <span>Ver servicios</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Desplazate</span>
+      <div class="hero__scroll-track"><div class="hero__scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= NOSOTROS ================= -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Quiénes somos</p>
+        <h2 class="h2">No vendemos <span class="text-outline">vuelos.</span><br>Vendemos <span class="text-fill">certeza.</span></h2>
+      </div>
+
+      <div class="nosotros__grid">
+        <div class="nosotros__story" data-reveal>
+          <p class="lead">
+            BNO Agro nació de una pregunta simple: ¿por qué el campo argentino sigue
+            dependiendo de márgenes de error que la tecnología ya resolvió hace años?
+          </p>
+          <p>
+            Operamos drones de aplicación agrícola de última generación, guiados por
+            sistemas RTK de posicionamiento centimétrico y mapeo multiespectral. Cada
+            pasada se planifica en software, se ejecuta en el aire y se audita con datos.
+            El resultado: menos deriva, menos desperdicio, más rinde.
+          </p>
+          <p>
+            Con base en Río Cuarto, cubrimos el sur de Córdoba y zonas limítrofes,
+            trabajando codo a codo con productores que ya no están dispuestos a dejar
+            la precisión librada al viento.
+          </p>
+        </div>
+
+        <div class="nosotros__pillars">
+          <div class="pillar" data-reveal>
+            <span class="pillar__num">Innovación</span>
+            <p>Flota de drones de última generación actualizada cada temporada.</p>
+          </div>
+          <div class="pillar" data-reveal>
+            <span class="pillar__num">Precisión</span>
+            <p>RTK centimétrico y mapas de aplicación variable por lote.</p>
+          </div>
+          <div class="pillar" data-reveal>
+            <span class="pillar__num">Seguridad</span>
+            <p>Pilotos certificados y protocolos de aplicación auditables.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Servicios</p>
+        <h2 class="h2">Todo lo que el campo<br>necesita, <span class="text-fill">desde arriba.</span></h2>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card service-card--lg" data-reveal data-tilt>
+          <div class="service-card__visual" data-visual="spray"></div>
+          <div class="service-card__body">
+            <span class="service-card__index">01</span>
+            <h3>Pulverización aérea</h3>
+            <p>Aplicación de fitosanitarios con boquillas de flujo variable y corte
+              automático por sección, minimizando deriva y solapamiento.</p>
+            <ul class="service-card__tags">
+              <li>Corte automático</li><li>Flujo variable</li><li>Bajo volumen</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal data-tilt>
+          <div class="service-card__visual" data-visual="seed"></div>
+          <div class="service-card__body">
+            <span class="service-card__index">02</span>
+            <h3>Siembra aérea</h3>
+            <p>Distribución uniforme de semilla en lotes de difícil acceso o
+              coberturas invernales, con densidad programada por zona.</p>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal data-tilt>
+          <div class="service-card__visual" data-visual="fert"></div>
+          <div class="service-card__body">
+            <span class="service-card__index">03</span>
+            <h3>Fertilización aérea</h3>
+            <p>Aplicación sólida y líquida de precisión, ajustada a mapas de
+              productividad para maximizar la respuesta por ambiente.</p>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal data-tilt>
+          <div class="service-card__visual" data-visual="map"></div>
+          <div class="service-card__body">
+            <span class="service-card__index">04</span>
+            <h3>Mapeo &amp; agricultura de precisión</h3>
+            <p>Relevamiento multiespectral (NDVI) para detectar estrés hídrico,
+              plagas y variabilidad antes de que sean visibles a simple vista.</p>
+          </div>
+        </article>
+
+        <article class="service-card service-card--lg" data-reveal data-tilt>
+          <div class="service-card__visual" data-visual="apps"></div>
+          <div class="service-card__body">
+            <span class="service-card__index">05</span>
+            <h3>Aplicaciones con drones a medida</h3>
+            <p>Diseñamos el plan de vuelo según tu cultivo, tu lote y tu objetivo
+              productivo. Cada aplicación es un proyecto de precisión, no una rutina.</p>
+            <ul class="service-card__tags">
+              <li>Plan de vuelo</li><li>Reporte post-vuelo</li><li>Soporte agronómico</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFICIOS / COMPARATIVA ================= -->
+  <section class="section beneficios" id="beneficios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Beneficios</p>
+        <h2 class="h2">La diferencia se ve<br>en el <span class="text-fill">balance final.</span></h2>
+      </div>
+
+      <div class="compare" data-reveal>
+        <div class="compare__col compare__col--old">
+          <h3>Método tradicional</h3>
+          <ul>
+            <li><span class="bar" style="--v:38%"></span>Precisión de aplicación<b>38%</b></li>
+            <li><span class="bar" style="--v:60%"></span>Compactación de suelo<b>Alta</b></li>
+            <li><span class="bar" style="--v:45%"></span>Velocidad operativa<b>Media</b></li>
+            <li><span class="bar" style="--v:20%"></span>Acceso a lotes anegados<b>Nulo</b></li>
+          </ul>
+        </div>
+        <div class="compare__vs" aria-hidden="true">VS</div>
+        <div class="compare__col compare__col--new">
+          <h3>BNO Agro · Drone</h3>
+          <ul>
+            <li><span class="bar bar--green" style="--v:97%"></span>Precisión de aplicación<b>97%</b></li>
+            <li><span class="bar bar--green" style="--v:0%"></span>Compactación de suelo<b>Cero</b></li>
+            <li><span class="bar bar--green" style="--v:92%"></span>Velocidad operativa<b>Alta</b></li>
+            <li><span class="bar bar--green" style="--v:100%"></span>Acceso a lotes anegados<b>Total</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ESTADÍSTICAS ================= -->
+  <section class="section stats" id="estadisticas">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="12500" data-suffix="+">0</span>
+          <span class="stat__label">Hectáreas tratadas</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="140" data-suffix="+">0</span>
+          <span class="stat__label">Clientes activos</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="3200" data-suffix="+">0</span>
+          <span class="stat__label">Aplicaciones realizadas</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat__num" data-count="98" data-suffix="%">0</span>
+          <span class="stat__label">Cobertura de precisión</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESO ================= -->
+  <section class="section proceso" id="proceso">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Cómo trabajamos</p>
+        <h2 class="h2">De la consulta<br>al <span class="text-fill">lote pulverizado.</span></h2>
+      </div>
+    </div>
+
+    <div class="timeline" data-reveal>
+      <div class="timeline__track">
+        <div class="timeline__progress" id="timelineProgress"></div>
+        <div class="timeline__step">
+          <span class="timeline__dot"></span>
+          <span class="timeline__step-num">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Relevamos el lote, el cultivo y el objetivo agronómico con vos.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__dot"></span>
+          <span class="timeline__step-num">02</span>
+          <h3>Plan de vuelo</h3>
+          <p>Diseñamos la ruta, la dosis y el momento óptimo de aplicación.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__dot"></span>
+          <span class="timeline__step-num">03</span>
+          <h3>Aplicación</h3>
+          <p>Ejecutamos el vuelo con guía RTK y monitoreo en tiempo real.</p>
+        </div>
+        <div class="timeline__step">
+          <span class="timeline__dot"></span>
+          <span class="timeline__step-num">04</span>
+          <h3>Reporte</h3>
+          <p>Entregamos mapa de cobertura y métricas de la aplicación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Galería</p>
+        <h2 class="h2">Operaciones<br><span class="text-fill">en el campo.</span></h2>
+      </div>
+    </div>
+
+    <div class="masonry" id="masonry">
+      <figure class="masonry__item masonry__item--tall" data-reveal data-visual="g1" data-caption="Pulverización sobre soja"></figure>
+      <figure class="masonry__item" data-reveal data-visual="g2" data-caption="Preparación previa al vuelo"></figure>
+      <figure class="masonry__item masonry__item--wide" data-reveal data-visual="g3" data-caption="Mapa NDVI del lote"></figure>
+      <figure class="masonry__item" data-reveal data-visual="g4" data-caption="Siembra de cobertura"></figure>
+      <figure class="masonry__item masonry__item--tall" data-reveal data-visual="g5" data-caption="Fertilización en maíz"></figure>
+      <figure class="masonry__item" data-reveal data-visual="g6" data-caption="Estación RTK en campo"></figure>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIOS ================= -->
+  <section class="section testimonios" id="testimonios">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Testimonios</p>
+        <h2 class="h2">Lo que dicen<br><span class="text-fill">los que ya volaron.</span></h2>
+      </div>
+
+      <div class="slider" data-reveal>
+        <div class="slider__track" id="sliderTrack">
+          <blockquote class="slider__card">
+            <p>“Bajamos la deriva a niveles que nunca habíamos visto. El reporte
+              post-vuelo cambió la forma en que tomamos decisiones.”</p>
+            <footer><span class="avatar" aria-hidden="true">JF</span><div><b>Javier Ferreyra</b><span>Productor, Vicuña Mackenna</span></div></footer>
+          </blockquote>
+          <blockquote class="slider__card">
+            <p>“Pudimos sembrar cobertura en lotes anegados que con máquina
+              terrestre eran imposibles. Otro nivel de servicio.”</p>
+            <footer><span class="avatar" aria-hidden="true">MG</span><div><b>Marcela Gómez</b><span>Agrónoma, Río Cuarto</span></div></footer>
+          </blockquote>
+          <blockquote class="slider__card">
+            <p>“La precisión en la dosis nos ahorró insumos desde la primera
+              aplicación. El equipo es serio y responde rápido por WhatsApp.”</p>
+            <footer><span class="avatar" aria-hidden="true">DL</span><div><b>Diego Luna</b><span>Productor, Coronel Moldes</span></div></footer>
+          </blockquote>
+        </div>
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section faq" id="faq">
+    <div class="container container--narrow">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__line"></span>Preguntas frecuentes</p>
+        <h2 class="h2">Todo lo que querés<br><span class="text-fill">saber antes de volar.</span></h2>
+      </div>
+
+      <div class="accordion" data-reveal>
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>¿Qué superficie mínima trabajan?</span><span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__panel"><p>Trabajamos lotes desde 3 hectáreas en adelante,
+            optimizando la ruta de vuelo según la forma y el acceso del terreno.</p></div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>¿En qué zonas operan?</span><span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__panel"><p>Con base en Río Cuarto, cubrimos el sur de
+            Córdoba y localidades limítrofes. Consultanos por tu zona puntual.</p></div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>¿Pueden aplicar en lotes anegados o de difícil acceso?</span><span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__panel"><p>Sí, es una de las principales ventajas del
+            drone frente a la maquinaria terrestre: no compacta el suelo ni depende de la transitabilidad.</p></div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>¿Qué incluye el reporte post-vuelo?</span><span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__panel"><p>Mapa de cobertura real, dosis aplicada por
+            sector, tiempos de operación y observaciones agronómicas relevantes.</p></div>
+        </div>
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>¿Cómo se solicita un servicio?</span><span class="accordion__icon"></span>
+          </button>
+          <div class="accordion__panel"><p>Por WhatsApp o email. Coordinamos una visita
+            o relevamiento remoto del lote y te enviamos una propuesta con fecha estimada de vuelo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="cta-final" id="contacto">
+    <div class="cta-final__grid" aria-hidden="true"></div>
+    <div class="container">
+      <p class="eyebrow eyebrow--light" data-reveal><span class="eyebrow__line"></span>Empecemos</p>
+      <h2 class="cta-final__title" data-reveal>
+        Tu próximo lote<br>merece <span class="text-fill">precisión.</span>
+      </h2>
+      <p class="cta-final__sub" data-reveal>
+        Escribinos y coordinamos el vuelo. Respuesta en el día por WhatsApp.
+      </p>
+      <div class="cta-final__actions" data-reveal>
+        <a href="https://wa.me/5493584247501" class="btn btn--whatsapp btn--magnetic" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.6-1.26 1.16-1.74 1.2-.46.04-.9.22-3.02-.63-2.56-1.02-4.2-3.62-4.33-3.79-.13-.17-1.03-1.37-1.03-2.6 0-1.24.65-1.85.88-2.1.22-.24.48-.3.64-.3.16 0 .32 0 .46.01.15.01.35-.06.55.42.22.53.74 1.83.8 1.96.07.14.11.3.02.48-.08.17-.13.27-.26.42-.13.15-.27.33-.39.44-.13.13-.26.27-.11.53.15.27.68 1.13 1.47 1.83 1.01.9 1.86 1.18 2.13 1.31.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.12.07.68-.15 1.28z"/></svg>
+          <span>Solicitar asesoramiento por WhatsApp</span>
+        </a>
+      </div>
+      <div class="cta-final__meta" data-reveal>
+        <a href="mailto:bnoagro1@gmail.com">bnoagro1@gmail.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://instagram.com/bno.agro" target="_blank" rel="noopener">@bno.agro</a>
+        <span aria-hidden="true">·</span>
+        <span>Río Cuarto, Córdoba, Argentina</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#top" class="footer__brand">BNO<em>AGRO</em></a>
+    <p class="footer__copy">© <span id="year"></span> BNO Agro. Servicios agrícolas aéreos con drones. Río Cuarto, Córdoba, Argentina.</p>
+    <div class="footer__links">
+      <a href="https://wa.me/5493584247501" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:bnoagro1@gmail.com">Email</a>
+      <a href="https://instagram.com/bno.agro" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <div class="lightbox__stage" id="lightboxStage"></div>
+</div>
+
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>

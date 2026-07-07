@@ -1,0 +1,17 @@
+{
+  "name": "BNO Agro",
+  "short_name": "BNO Agro",
+  "description": "Agricultura de precisión desde el aire — pulverización, siembra y fertilización con drones.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090A",
+  "theme_color": "#07090A",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
